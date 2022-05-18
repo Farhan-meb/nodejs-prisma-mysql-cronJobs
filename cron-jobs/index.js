@@ -1,10 +1,12 @@
 var cron = require('node-cron');
+const _delete = require('../helpers/deleteFolderFiles');
 
-let counter = 1;
-
-//runs everyday at 12:31 pm
-
-const job = cron.schedule("00 31 12 * * *", function(){
-    console.log('hello!', counter++);
+//runs everyday at 02:38 pm
+cron.schedule("00 38 14 * * *", function(){
+    console.log('hello!');
 })
-module.exports = { job }
+
+//runs every 1 hour
+cron.schedule("0 0 */1 * * *", function(){
+    _delete.deleteImages();
+})

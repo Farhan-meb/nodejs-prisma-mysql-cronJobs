@@ -1,9 +1,9 @@
 const express = require('express');
+//const db = require('./database');
 const middlewares = require('./middlewares');
 const router = require('./routes');
 const globalErrorHandler = require('./controllers/handlers/errorController');
-const _delete = require('./helpers/deleteFolderFiles');
-const cronJobs = require('./cron-jobs')
+
 
 const app = express();
 
@@ -13,8 +13,8 @@ app.use(...middlewares);
 
 router.registerApplicationRoutes(app);
 
-app.use(globalErrorHandler);
+//db.connectMongoLocal();
 
-_delete.deleteImages();
+app.use(globalErrorHandler);
 
 module.exports = app;
