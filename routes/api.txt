@@ -1,0 +1,7 @@
+POST https://localhost:4000/user
+content-type: application/json
+
+{
+    "username": "Nafisa_123",
+    "role": "client"
+}
