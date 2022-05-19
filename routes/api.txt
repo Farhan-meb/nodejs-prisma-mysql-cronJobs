@@ -1,7 +1,35 @@
-POST https://localhost:4000/user
+POST http://localhost:4000/api/user
 content-type: application/json
 
 {
-    "username": "Nafisa_123",
+    "username": "LahinJsNew",
     "role": "client"
+}
+
+###
+
+GET http://localhost:4000/api/user
+
+###
+
+POST http://localhost:4000/api/post
+content-type: application/json
+
+{
+    "title": "letters",
+    "post": "abcdefghijklmnopqrstwxyz",
+    "isPublished": false,
+    "user_id": 2
+}
+
+###
+
+PATCH http://localhost:4000/api/post
+content-type: application/json
+
+{
+    "title": "updated-letters",
+    "post": "abcdefghijklmnopqrstwxyz",
+    "isPublished": true,
+    "user_id": 1
 }
