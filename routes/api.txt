@@ -24,7 +24,11 @@ content-type: application/json
 
 ###
 
-PATCH http://localhost:4000/api/post
+GET http://localhost:4000/api/post
+
+###
+
+PATCH http://localhost:4000/api/post/4
 content-type: application/json
 
 {
