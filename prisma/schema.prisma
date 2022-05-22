@@ -11,7 +11,7 @@ generator client {
 model Post {
   id          Int      @id @default(autoincrement())
   title       String
-  post        String
+  post        String   @db.VarChar(200)
   isPublished Boolean  @default(false)
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
