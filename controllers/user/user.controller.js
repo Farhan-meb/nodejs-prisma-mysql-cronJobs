@@ -22,6 +22,11 @@ const getUsers = catchAsync(async (req, res, next) => {
     });
 });
 
+// testing better comment
+// ! warning and error comments
+// ? query comments
+// TODO todo comments
+
 const createUser = catchAsync(async (req, res, next) => {
     const { username, role } = req.body;
 
