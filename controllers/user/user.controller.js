@@ -10,8 +10,8 @@ const getUsers = catchAsync(async (req, res, next) => {
             role: true,
             posts: true,
         },
-        skip: 1,
-        take: 2,
+        //skip: 1,
+        //take: 2,
         orderBy: {
             id: 'desc',
         },
