@@ -1,6 +1,9 @@
 # dependencies
 /node_modules
 
+# migerations
+/prisma/migerations
+
 # environments variables
 
 # misc
