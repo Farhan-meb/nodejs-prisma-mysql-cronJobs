@@ -18,29 +18,29 @@ const getUsers = catchAsync(async (req, res, next) => {
     });
 
     res.status(200).json({
-        users
-    })
+        users,
+    });
 });
 
-const createUser = catchAsync(async (req,res,next) => {
-    const {username, role} = req.body;
+const createUser = catchAsync(async (req, res, next) => {
+    const { username, role } = req.body;
 
-    if(username === null || role === null){
+    if (username === null || role === null) {
         return next(new AppError('Username & Role is required!'), 4000);
     }
 
-    console.log('here')
+    console.log('here');
 
     await User.create({
         data: {
             username,
-            role
+            role,
         },
     });
 
     res.status(201).json({
-        message: "User created successfully!", 
-    })
-})
+        message: 'User created successfully!',
+    });
+});
 
-module.exports = { getUsers, createUser }
+module.exports = { getUsers, createUser };
