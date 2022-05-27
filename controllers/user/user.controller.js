@@ -29,12 +29,14 @@ const getUsers = catchAsync(async (req, res, next) => {
 
 const createUser = catchAsync(async (req, res, next) => {
     const { username, role } = req.body;
+    console.log(
+        '🚀 ~ file: user.controller.js ~ line 32 ~ createUser ~ role',
+        role
+    );
 
     if (username === null || role === null) {
         return next(new AppError('Username & Role is required!'), 4000);
     }
-
-    console.log('here');
 
     await User.create({
         data: {
