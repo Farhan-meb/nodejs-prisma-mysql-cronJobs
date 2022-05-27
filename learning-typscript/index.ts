@@ -53,3 +53,7 @@ const person: {
 person.isStupid = true; // aasigning the optional variable later!
 console.log('🚀 ~ file: index.ts ~ line 43 ~ person', person);
 console.log('🚀 ~ file: index.ts ~ line 49 ~ isStupid', person.isStupid);
+
+//object - index signature
+
+const person : { [index : number] : number}
